@@ -1,0 +1,31 @@
+{{ form_start(form) }}
+
+    <div class="form-group">
+        {{ form_label(form.email) }}
+        {{ form_widget(form.email) }}
+        <div class="form-error">{{ form_errors(form.email) }}</div>
+    </div>
+
+    <div class="form-group">
+        {{ form_label(form.username) }}
+        {{ form_widget(form.username) }}
+        <div class="form-error">{{ form_errors(form.username) }}</div>
+    </div>
+
+    <div class="form-group">
+        {{ form_label(form.plainPassword.first) }}
+        {{ form_widget(form.plainPassword.first) }}
+        <div class="form-error">{{ form_errors(form.plainPassword.first) }}</div>
+    </div>
+
+    <div class="form-group">
+        {{ form_label(form.plainPassword.second) }}
+        {{ form_widget(form.plainPassword.second) }}
+    </div>
+
+    <div class="form-group">
+        <button type="submit" class="btn btn-primary btn-block">{% trans %} button.register {% endtrans %}</button>
+    </div>
+
+
+{{ form_end(form) }}

@@ -1,0 +1,31 @@
+{% extends 'navbar_base.html.twig' %}
+
+{% block stylesheets %}
+    {{ parent() }}
+{% endblock %}
+
+{% block title %} Upload {% endblock %}
+
+{% block body %}
+
+    <div class="container-fluid">
+        <div class="row js-img">
+            <div class="col-12">
+                {{ include('post/form/_form_add_posts.html.twig') }}
+            </div>
+        </div>
+    </div>
+
+{% endblock %}
+
+{% block javascripts %}
+    {{ parent() }}
+    <script src="{{ asset('js/ImageApp.js') }}"></script>
+
+    <script>
+        jQuery(function () {
+            var $wrapper = $('.js-img');
+            var imageApp = new ImageApp($wrapper);
+        });
+    </script>
+{% endblock %}

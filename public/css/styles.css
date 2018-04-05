@@ -1,0 +1,120 @@
+html, body {
+    min-height: 100vh;
+    position: relative;
+    margin: 0;
+}
+
+main {
+    padding-bottom: 50px;
+}
+
+footer {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 50px;
+}
+
+.login-box {
+    padding-top: 50px;
+    padding-bottom: 50px;
+}
+
+.login-links {
+    margin-top: 15px;
+}
+
+.form-error {
+    color: red;
+}
+
+.form-error ul {
+    list-style: none;
+    text-align: left;
+    padding: 0;
+}
+
+.list-scroll {
+    height: 400px;
+    overflow-y: scroll;
+}
+
+input[type='file'] {
+    color: transparent;
+}
+
+li > span.limit-text-length {
+    display: inline-block;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    width: 90%;
+}
+
+.file-upload-form {
+    color: #424b54;
+    margin-top: 50px;
+}
+
+.file-upload-block > div {
+    background-color: #e3e3e3;
+    padding: 10px;
+}
+
+.file-upload-button {
+    background-color: #93a8ac;
+    border-color: #93a8ac;
+}
+
+.list-content {
+    border-top-style: none;
+    border-right: solid #e3e3e3 8px;
+    border-bottom-style: none;
+    border-left: solid #e3e3e3 8px;
+}
+
+.img-holder {
+    padding: 15px;
+}
+
+.img-tag {
+    margin-left: 5px;
+    margin-right: 5px;
+}
+
+#img-holder > img {
+    object-fit: contain;
+    object-position: 0 0;
+    width: 100%;
+    height: 800px;
+    cursor: pointer;
+}
+
+#img-col {
+    margin-top: 50px;
+}
+
+#search-image-form {
+    margin-top: 50px;
+    margin-bottom: 50px;
+}
+
+#list-tags {
+    list-style-type: none;
+    padding: 0;
+}
+
+#list-tags > a {
+    text-decoration: none;
+}
+
+@media (max-width: 768px) {
+    #search-image-form {
+        margin-top: 25px;
+        margin-bottom: 20px;
+    }
+
+    #img-col {
+        margin-top: 0;
+    }
+}

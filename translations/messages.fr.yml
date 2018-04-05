@@ -1,0 +1,4 @@
+pwd.must.match: 'Les mots de passes doivent correspondre'
+username: 'Nom d''utilisateur'
+pwd: 'Mot de passe'
+pwd.confirm: 'Confirmation mot de passe'

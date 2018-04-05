@@ -1,0 +1,46 @@
+{% extends 'navbar_base.html.twig' %}
+
+{% block title %} My images {% endblock %}
+
+{% block body %}
+    <table class="table table-striped js-img-table">
+        <thead>
+            <tr>
+                <th scope="col">Name</th>
+                <th scope="col">MD5</th>
+                <th scope="col">Size</th>
+                <th scope="col">Actions</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for image in images %}
+                <tr>
+                    <td>{{ image.image | split('/') | last }}</td>
+                    <td>{{ image.md5 }}</td>
+                    <td>{{ image.size }}</td>
+                    <td>
+                        <a href="#"
+                           class="js-delete-img"
+                           data-url="{{ path('post_delete', {id: image.id}) }}"
+                        >
+                            <span class="fa fa-trash"></span>
+                        </a>
+                    </td>
+                </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+
+{% endblock %}
+
+{% block javascripts %}
+    {{ parent() }}
+    <script src="{{ asset('js/ImageApp.js') }}"></script>
+
+    <script>
+        jQuery(function () {
+            var $table = $('.js-img-table');
+            new ImageApp($table);
+        });
+    </script>
+{% endblock %}

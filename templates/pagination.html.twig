@@ -1,0 +1,40 @@
+<nav>
+    <ul class="pagination justify-content-center">
+        {% if pagination.currentPage > 1 %}
+            <li class="page-item">
+                <a class="page-link" href="{{ path(pagination.routeName,  pagination.routeParams|merge({page: 1})) }}">
+                    {% trans %} button.first {% endtrans %}
+                </a>
+            </li>
+            <li class="page-item">
+                <a class="page-link" href="{{ path(pagination.routeName,  pagination.routeParams|merge({page: pagination.currentPage-1})) }}">
+                    {% trans %} button.previous {% endtrans %}
+                </a>
+            </li>
+        {% endif %}
+
+        {% for p in range(
+            max(pagination.currentPage - pagination.range, 1)
+            , min(pagination.currentPage + pagination.range, pagination.nbPages))
+        %}
+            <li class="page-item {% if p == pagination.currentPage %}active{% endif %}">
+                <a class="page-link" href="{{ path(pagination.routeName,  pagination.routeParams|merge({page: p})) }}">
+                    {{ p }}
+                </a>
+            </li>
+        {% endfor %}
+
+        {% if pagination.currentPage < pagination.nbPages %}
+            <li class="page-item">
+                <a class="page-link" href="{{ path(pagination.routeName, pagination.routeParams|merge({page: pagination.currentPage+1})) }}">
+                    {% trans %} button.next {% endtrans %}
+                </a>
+            </li>
+            <li class="page-item">
+                <a class="page-link" href="{{ path(pagination.routeName, pagination.routeParams|merge({page: pagination.nbPages})) }}">
+                    {% trans %} button.last {% endtrans %}
+                </a>
+            </li>
+        {% endif %}
+    </ul>
+</nav>

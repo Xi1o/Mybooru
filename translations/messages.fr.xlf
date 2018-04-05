@@ -1,0 +1,135 @@
+<?xml version="1.0"?>
+<xliff version="1.2" xmlns="urn:oasis:names:tc:xliff:document:1.2">
+    <file source-language="en" datatype="plaintext" original="file.ext">
+        <body>
+            <trans-unit id="page_title_signin">
+                <source>page_title.signin</source>
+                <target>Connexion</target>
+            </trans-unit>
+            <trans-unit id="page_title_signup">
+                <source>page_title.signup</source>
+                <target>Créer compte</target>
+            </trans-unit>
+            <trans-unit id="page_title_home">
+                <source>page_title.home</source>
+                <target>Accueil</target>
+            </trans-unit>
+            <trans-unit id="page_title_upload">
+                <source>page_title.upload</source>
+                <target>Uploader</target>
+            </trans-unit>
+            <trans-unit id="page_title_my_images">
+                <source>page_title.my_images</source>
+                <target>Mes images</target>
+            </trans-unit>
+            <trans-unit id="label_username">
+                <source>label.username</source>
+                <target>Nom utilisateur</target>
+            </trans-unit>
+            <trans-unit id="label_password">
+                <source>label.password</source>
+                <target>Mot de passe</target>
+            </trans-unit>
+            <trans-unit id="label_password_repeat">
+                <source>label.password_repeat</source>
+                <target>Confirmation mot de passe</target>
+            </trans-unit>
+            <trans-unit id="label_email">
+                <source>label.email</source>
+                <target>Adresse E-mail</target>
+            </trans-unit>
+            <trans-unit id="label_image_upload">
+                <source>label.image_upload</source>
+                <target>Sélectionner les images à envoyer</target>
+            </trans-unit>
+            <trans-unit id="label_search_images">
+                <source>label.search_images</source>
+                <target>Rechercher</target>
+            </trans-unit>
+            <trans-unit id="label_send">
+                <source>label.send</source>
+                <target>Envoyer</target>
+            </trans-unit>
+            <trans-unit id="label_tags">
+                <source>label.tags</source>
+                <target>Ajouter des tags</target>
+            </trans-unit>
+            <trans-unit id="label_connection">
+                <source>label.connection</source>
+                <target>Connexion</target>
+            </trans-unit>
+            <trans-unit id="button_login">
+                <source>button.login</source>
+                <target>Connexion</target>
+            </trans-unit>
+            <trans-unit id="button_register">
+                <source>button.register</source>
+                <target>Enregistrement</target>
+            </trans-unit>
+            <trans-unit id="button_next">
+                <source>button.next</source>
+                <target>Suivant</target>
+            </trans-unit>
+            <trans-unit id="button_previous">
+                <source>button.previous</source>
+                <target>Précédent</target>
+            </trans-unit>
+            <trans-unit id="button_first">
+                <source>button.first</source>
+                <target>Premier</target>
+            </trans-unit>
+            <trans-unit id="button_last">
+                <source>button.last</source>
+                <target>Dernier</target>
+            </trans-unit>
+            <trans-unit id="title_signin">
+                <source>title.signin</source>
+                <target>Se connecter</target>
+            </trans-unit>
+            <trans-unit id="title_signup">
+                <source>title.signup</source>
+                <target>S'enregistrer</target>
+            </trans-unit>
+            <trans-unit id="link_register">
+                <source>link.register</source>
+                <target>Créer un compte</target>
+            </trans-unit>
+            <trans-unit id="link_login">
+                <source>link.login</source>
+                <target>Me connecter</target>
+            </trans-unit>
+            <trans-unit id="error_password_dont_match">
+                <source>error.passwords_dont_match</source>
+                <target>Les mots de passe doivent correspondre</target>
+            </trans-unit>
+            <trans-unit id="error_invalid_extension">
+                <source>error.invalid_extension</source>
+                <target>Extension image invalide</target>
+            </trans-unit>
+            <trans-unit id="error_server">
+                <source>error.server</source>
+                <target>Erreur serveur</target>
+            </trans-unit>
+            <trans-unit id="th_filename">
+                <source>th.filename</source>
+                <target>Nom fichier</target>
+            </trans-unit>
+            <trans-unit id="th_filesize">
+                <source>th.filesize</source>
+                <target>Taille</target>
+            </trans-unit>
+            <trans-unit id="th_delete">
+                <source>th.delete</source>
+                <target>Supprimer</target>
+            </trans-unit>
+            <trans-unit id="msg_upload_completed">
+                <source>msg.upload_completed</source>
+                <target>Images envoyées</target>
+            </trans-unit>
+            <trans-unit id="error_upload_failed">
+                <source>error.upload_failed</source>
+                <target>Une erreur est survenue</target>
+            </trans-unit>
+        </body>
+    </file>
+</xliff>

@@ -1,0 +1,23 @@
+<form action="{{  path('app_login') }}" method="post">
+
+    {% if error %}
+        <div class="alert alert-danger">
+            {{ error.messageKey | trans(error.messageData, 'security') }}
+        </div>
+    {% endif %}
+
+    <div class="form-group">
+        <label for="username"> {% trans %} label.username {% endtrans %} </label>
+        <input type="text" class="form-control" id="username" name="_username" required>
+    </div>
+
+    <div class="form-group">
+        <label for="password"> {% trans %} label.password {% endtrans %} </label>
+        <input type="password" class="form-control" id="password" name="_password" required>
+    </div>
+
+    <input type="hidden" name="_csrf_token" value="{{ csrf_token('authenticate') }}">
+
+    <button class="btn btn-success btn-block" type="submit"> {% trans %} button.login {% endtrans %} </button>
+
+</form>

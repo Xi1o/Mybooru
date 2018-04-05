@@ -1,0 +1,82 @@
+{{ form_start(form, {
+    'attr': {'class': 'js-new-image-form file-upload-form'}
+}) }}
+
+    <div class="row">
+        <div class="col-4 offset-sm-4 file-upload-block">
+            <div>
+                {# Multiple attribute to send image one by one via ajax #}
+                {{ form_row(form.image, {
+                    'attr': {'class': 'form-control js-file-upload', 'multiple': 'multiple'}
+                }) }}
+            </div>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-4 offset-sm-4 file-upload-block">
+            <div>
+                {{ form_row(form.tags, {
+                    'attr': {'class': 'form-control js-tags-input'}
+                }) }}
+            </div>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-4 offset-sm-4 file-upload-block">
+            <div id="js-tags-list">
+            </div>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-4 offset-sm-4">
+            <ul class="list-group list-scroll js-list-files list-content"></ul>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-4 offset-sm-4 file-upload-block">
+            <div>
+                <div class="row">
+                    <div class="offset-1 col-4">
+                        <button type="submit" class="btn btn-primary file-upload-button">
+                            {% trans %} label.send {% endtrans %}
+                        </button>
+                    </div>
+                    <div class="offset-1 col-4">
+                        <progress value="0" max="0"></progress>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+{{ form_end(form) }}
+
+<div id="success-modal" class="modal" tabindex="-1" role="dialog">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title">{% trans %} msg.upload_completed {% endtrans %}</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div id="fail-modal" class="modal" tabindex="-1" role="dialog">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title">{% trans %} error.upload_failed {% endtrans %}</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+        </div>
+    </div>
+</div>

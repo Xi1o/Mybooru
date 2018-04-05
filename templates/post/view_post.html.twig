@@ -1,0 +1,85 @@
+{% extends 'navbar_base.html.twig' %}
+
+{% block title %}  {% endblock %}
+
+{% block body %}
+    <div class="modal fade" id="enlargeImageModal" tabindex="-1" role="dialog" aria-labelledby="enlargeImageModal" aria-hidden="true">
+        <div class="modal-dialog modal-lg" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span></button>
+                </div>
+                <div class="modal-body">
+                    <img src="" class="enlargeImageModalSource" style="width: 100%;">
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-md-2" id="tags-col">
+                <div class="row">
+                    <div class="col-12">
+                        <form id="search-image-form" action="{{ path('post_list') }}" method="get">
+                            <div class="input-group">
+                                <input  type="text"
+                                        class="form-control"
+                                        required
+                                        name="tags"
+                                        placeholder="{% trans %} label.search_images {% endtrans %}"
+                                        value="{{ selectedTags }}">
+                                <div class="input-group-append">
+                                    <button class="btn btn-outline-primary" type="submit"><i class="fa fa-search"></i></button>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-12 d-none d-md-block">
+                        <ul id="list-tags">
+                            {% for tag in imageTags %}
+                                <li><a href="{{ path('post_list', {'tags': tag.title}) }}">{{ tag.title }}</a></li>
+                            {% endfor %}
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-8 col-sm-10 offset-sm-1 col-10 offset-1" id="img-col">
+                <div id="img-holder" class="row text-center">
+                    <img id="js-img-view" class="img-fluid" src="{{ imagePath }}">
+                </div>
+
+            </div>
+        </div>
+    </div>
+{% endblock %}
+
+{% block javascripts %}
+    {{ parent() }}
+
+    <script>
+        $(function() {
+            var $img = $('#js-img-view');
+            var fullSize = false;
+            $img.on('click', function (e) {
+                e.preventDefault();
+                if(!fullSize) {
+                    $img.css({ width: 'auto', height:'auto' });
+                } else {
+                    $img.css({ width: '100%', height:'700px' });
+                }
+                fullSize = !fullSize;
+            })
+
+        });
+
+       /* $(function() {
+            $('#js-img-view').on('click', function() {
+                $('.enlargeImageModalSource').attr('src', $(this).attr('src'));
+                $('#enlargeImageModal').modal('show');
+            });
+        });*/
+    </script>
+{% endblock %}

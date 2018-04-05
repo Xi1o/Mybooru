@@ -1,0 +1,36 @@
+{% extends 'navbar_base.html.twig' %}
+
+{% block title %} {% trans %} page_title.signup {% endtrans %} {% endblock %}
+
+{% block body %}
+
+    <div class="h-100">
+        <div class="wrapper container h-100">
+            <div class="row h-100">
+                <div class="col-12 h-100">
+
+                    <div class="row h-100">
+                        <div class="offset-sm-4 col-sm-4 align-self-center login-box">
+                            <div class="card">
+                                <h4 class="card-header">
+                                    {% trans %} title.signup {% endtrans %}
+                                </h4>
+                                <div class="card-body">
+                                    {{ include('login/form/_form_register.html.twig') }}
+
+                                    <div class="text-center login-links">
+                                        <a href="{{ path('app_login') }}">
+                                            {% trans %} link.login {% endtrans %}
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+{% endblock %}

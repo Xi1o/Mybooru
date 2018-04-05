@@ -1,0 +1,52 @@
+{% extends 'navbar_base.html.twig' %}
+{% block title %} {% trans %} page_title.home {% endtrans %} {% endblock %}
+{% block body %}
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-md-2 col-sm-12">
+                <div class="row">
+                    <div class="col-12">
+                        <form id="search-image-form" action="{{ path('post_list') }}" method="get">
+                            <div class="input-group">
+                                <input  type="text"
+                                        class="form-control"
+                                        required
+                                        name="tags"
+                                        placeholder="{% trans %} label.search_images {% endtrans %}"
+                                        value="{{ selectedTags }}">
+                                <div class="input-group-append">
+                                    <button class="btn btn-outline-primary" type="submit"><i class="fa fa-search"></i></button>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-12 d-none d-md-block">
+                        <ul id="list-tags">
+                            {% for tag in imagesTags %}
+                                <li><a href="{{ path('post_list', {'tags': tag}) }}">{{ tag }}</a></li>
+                            {% endfor %}
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-10 col-sm-12">
+                <div class="row">
+                    {% for image in images %}
+                        <div class="col-md-3 col-sm-4 col-6 text-center img-holder align-self-center">
+                            <a href="{{ path('post_view', { id: image.id }) }}">
+                                <img class="img-thumbnail" src="{{ asset(image.thumbnail) }}" alt="thumbnail">
+                            </a>
+                        </div>
+                    {% endfor %}
+                </div>
+            </div>
+        </div>
+
+    </div>
+{% endblock %}
+
+{% block footer %}
+    {{ include('pagination.html.twig') }}
+{% endblock %}
