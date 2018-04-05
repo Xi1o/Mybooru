@@ -72,12 +72,4 @@ class LoginController extends AbstractController {
             'error'         => $error,
         ));
     }
-
-    /**
-     * @Route(path="phpinfo", name="phpinfo")
-     */
-    public function phpinfo() {
-        phpinfo();
-    }
-
 }
