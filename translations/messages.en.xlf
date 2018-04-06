@@ -126,6 +126,14 @@
                 <source>error.upload_failed</source>
                 <target>Upload failed</target>
             </trans-unit>
+            <trans-unit id="label_uploaded_by:">
+                <source>label.uploaded_by:</source>
+                <target>Uploaded by:</target>
+            </trans-unit>
+            <trans-unit id="label_published(date):">
+                <source>label.published:</source>
+                <target>Published:</target>
+            </trans-unit>
         </body>
     </file>
 </xliff>

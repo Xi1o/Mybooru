@@ -39,19 +39,22 @@
                 <div class="row">
                     <div class="col-md-12 d-none d-md-block">
                         <ul id="list-tags">
-                            {% for tag in imageTags %}
+                            {% for tag in image.tags %}
                                 <li><a href="{{ path('post_list', {'tags': tag.title}) }}">{{ tag.title }}</a></li>
                             {% endfor %}
+                        </ul>
+                        <ul id="list-metadata">
+                            <li>{% trans %}label.uploaded_by:{% endtrans %} {{ image.author.username }}</li>
+                            <li>{% trans %}label.published:{% endtrans %} {{ image.created | date('d/m/Y') }}</li>
                         </ul>
                     </div>
                 </div>
             </div>
             <div class="col-md-8 col-sm-10 offset-sm-1 col-10 offset-1" id="img-col">
                 <div id="img-holder" class="row text-center">
-                    {% set altValue = imageTags | array_from_method('getTitle') | slice(0, 9) | join(' ') %}
-                    <img id="js-img-view" class="img-fluid" src="{{ imagePath }}" alt="{{ altValue }}">
+                    {% set altValue = image.tags | array_from_method('getTitle') | slice(0, 9) | join(' ') %}
+                    <img id="js-img-view" class="img-fluid" src="{{ image.image }}" alt="{{ altValue }}">
                 </div>
-
             </div>
         </div>
     </div>

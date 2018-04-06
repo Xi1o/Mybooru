@@ -82,15 +82,11 @@ class PostController extends Controller {
      */
     public function viewPost($id, ImageRepository $imageRepository) {
         $image = $imageRepository->findOneBy(['id' => $id]);
-        $vars = [];
-        if (null !== $image) {
-            $vars['imagePath'] =  $image->getImage();
-            $vars['imageTags'] = $image->getTags();
-        }
 
-        $vars['selectedTags'] = '';
-
-        return $this->render('post/view_post.html.twig', $vars);
+        return $this->render('post/view_post.html.twig', [
+            'selectedTags' => ''
+            , 'image' => $image
+        ]);
     }
 
     /**

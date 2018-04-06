@@ -99,12 +99,12 @@ li > span.limit-text-length {
     margin-bottom: 50px;
 }
 
-#list-tags {
+#list-tags, #list-metadata {
     list-style-type: none;
     padding: 0;
 }
 
-#list-tags > a {
+#list-tags > a, #list-metadata > a {
     text-decoration: none;
 }
 

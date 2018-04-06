@@ -130,6 +130,14 @@
                 <source>error.upload_failed</source>
                 <target>Une erreur est survenue</target>
             </trans-unit>
+            <trans-unit id="label_uploaded_by:">
+                <source>label.uploaded_by:</source>
+                <target>Soumis par :</target>
+            </trans-unit>
+            <trans-unit id="label_published(date):">
+                <source>label.published:</source>
+                <target>Publiée le :</target>
+            </trans-unit>
         </body>
     </file>
 </xliff>
