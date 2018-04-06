@@ -1,2 +1,9 @@
 logout:
     path: /logout
+
+homepage:
+    path: /
+    controller: Symfony\Bundle\FrameworkBundle\Controller\RedirectController::urlRedirectAction
+    defaults:
+        path: /posts
+        permanent: true
