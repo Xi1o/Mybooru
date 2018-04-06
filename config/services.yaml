@@ -40,3 +40,7 @@ services:
 
     App\Service\ImageUploader:
         arguments: ['%kernel.project_dir%/public', '%image_upload%']
+
+    App\Twig\AppExtension:
+        tags:
+            - { name: twig.extension }

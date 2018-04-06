@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "content-hash": "3b751c46537e0fc57f97b7e1e221fc9d",
+    "content-hash": "a862e879d9e27f2c26749966f7ebb86b",
     "packages": [
         {
             "name": "doctrine/annotations",
@@ -1010,6 +1010,7 @@
                 "backend",
                 "generator"
             ],
+            "abandoned": "easycorp/easyadmin-bundle",
             "time": "2018-02-10T11:44:58+00:00"
         },
         {
