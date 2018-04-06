@@ -36,7 +36,8 @@
                     {% for image in images %}
                         <div class="col-md-3 col-sm-4 col-6 text-center img-holder align-self-center">
                             <a href="{{ path('post_view', { id: image.id }) }}">
-                                <img class="img-thumbnail" src="{{ asset(image.thumbnail) }}" alt="thumbnail">
+                                {% set altValue = image.tags | array_from_method('getTitle') | slice(0, 9) | join(' ') %}
+                                <img class="img-thumbnail" src="{{ asset(image.thumbnail) }}" alt="{{ altValue }}">
                             </a>
                         </div>
                     {% endfor %}

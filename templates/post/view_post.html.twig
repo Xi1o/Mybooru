@@ -48,7 +48,8 @@
             </div>
             <div class="col-md-8 col-sm-10 offset-sm-1 col-10 offset-1" id="img-col">
                 <div id="img-holder" class="row text-center">
-                    <img id="js-img-view" class="img-fluid" src="{{ imagePath }}">
+                    {% set altValue = imageTags | array_from_method('getTitle') | slice(0, 9) | join(' ') %}
+                    <img id="js-img-view" class="img-fluid" src="{{ imagePath }}" alt="{{ altValue }}">
                 </div>
 
             </div>
